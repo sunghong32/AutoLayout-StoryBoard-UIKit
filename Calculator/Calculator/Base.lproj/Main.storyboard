@@ -217,7 +217,7 @@
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="tapSubstractButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lcD-0X-zKz"/>
+                                                            <action selector="tapSubtractButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sul-S1-Cup"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -397,55 +397,7 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="3qD-Tj-Wvw">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
         <designable name="86r-sX-0Md">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="MKo-SG-eSx">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="NRQ-ek-eqB">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="OSe-e1-pPJ">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="PwN-GU-m2T">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="RzA-KG-eQ3">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="TQW-nQ-oTb">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="Vcj-0F-2uL">
-            <size key="intrinsicContentSize" width="41" height="48"/>
-        </designable>
-        <designable name="YD6-xk-5C2">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="ZFY-3B-e2n">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="aHG-oX-1PA">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="rBU-N0-e07">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="tlY-m6-kXI">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="wcF-ld-xGB">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="z10-jg-IMG">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="zh0-z6-sXJ">
             <size key="intrinsicContentSize" width="30" height="48"/>
         </designable>
     </designables>
