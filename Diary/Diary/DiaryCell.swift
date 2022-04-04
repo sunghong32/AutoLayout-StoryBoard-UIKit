@@ -8,5 +8,7 @@
 import UIKit
 
 class DiaryCell: UICollectionViewCell {
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
     
 }

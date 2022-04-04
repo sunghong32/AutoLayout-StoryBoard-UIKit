@@ -47,7 +47,7 @@
         <!--View Controller-->
         <scene sceneID="sQ3-QU-61l">
             <objects>
-                <viewController id="zJQ-R7-ajr" sceneMemberID="viewController">
+                <viewController id="zJQ-R7-ajr" customClass="ViewController" customModule="Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kb0-py-sC8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,13 +70,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xf8-Xi-8ps">
-                                                    <rect key="frame" x="12" y="12" width="156" height="143"/>
+                                                    <rect key="frame" x="12" y="12" width="156" height="143.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="20.09.03(토)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88c-fG-vCA">
-                                                    <rect key="frame" x="12" y="167" width="156" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="20.09.03(토)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="88c-fG-vCA">
+                                                    <rect key="frame" x="12" y="167.5" width="156" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -93,6 +93,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="200"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="88c-fG-vCA" id="jic-lF-MEJ"/>
+                                            <outlet property="titleLabel" destination="xf8-Xi-8ps" id="yCk-bt-nDn"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -113,6 +117,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="nL8-HE-Jop" id="IeU-Iw-y77"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1PE-ac-lI9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -189,8 +196,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="일기 작성" id="7eM-2f-Ryr">
-                        <barButtonItem key="rightBarButtonItem" title="등록" id="7pM-eV-MX5"/>
+                        <barButtonItem key="rightBarButtonItem" title="등록" id="7pM-eV-MX5">
+                            <connections>
+                                <action selector="tabConfirmButton:" destination="giV-ex-nPS" id="ePw-XY-sbe"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confirmButton" destination="7pM-eV-MX5" id="1no-iK-seJ"/>
+                        <outlet property="contentsTextView" destination="KsL-Oe-83M" id="yxN-Ty-Ic7"/>
+                        <outlet property="dateTextField" destination="5Kf-AG-R3B" id="wGn-6X-2Lh"/>
+                        <outlet property="titleTextField" destination="RPV-fg-kCe" id="3vI-1K-75M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFu-oy-kFz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,7 +216,6 @@
         <!--즐겨찾기-->
         <scene sceneID="tC0-tq-bUx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lzp-TO-O0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="ngu-kb-Ur9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="즐겨찾기" image="star" catalog="system" selectedImage="star.fill" id="A2R-UQ-GIY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h1i-L1-jfC">
@@ -210,6 +226,7 @@
                         <segue destination="9rq-Kt-6PH" kind="relationship" relationship="rootViewController" id="RRC-uJ-hiY"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lzp-TO-O0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-161" y="791"/>
         </scene>
