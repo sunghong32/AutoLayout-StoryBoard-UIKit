@@ -19,6 +19,7 @@
 		6537847127FB10A600AB6199 /* WriteDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6537847027FB10A600AB6199 /* WriteDiaryViewController.swift */; };
 		6537847327FB112500AB6199 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6537847227FB112500AB6199 /* DiaryDetailViewController.swift */; };
 		6537847527FB1CAF00AB6199 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6537847427FB1CAF00AB6199 /* Diary.swift */; };
+		65B6829427FDC5BF00847E47 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6829327FDC5BF00847E47 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		6537847027FB10A600AB6199 /* WriteDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryViewController.swift; sourceTree = "<group>"; };
 		6537847227FB112500AB6199 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 		6537847427FB1CAF00AB6199 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		65B6829327FDC5BF00847E47 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				6537846E27FB0E7C00AB6199 /* StarCell.swift */,
 				6537847227FB112500AB6199 /* DiaryDetailViewController.swift */,
 				6537847427FB1CAF00AB6199 /* Diary.swift */,
+				65B6829327FDC5BF00847E47 /* Utility.swift */,
 				6537845C27FB09AD00AB6199 /* Main.storyboard */,
 				6537845F27FB09AE00AB6199 /* Assets.xcassets */,
 				6537846127FB09AE00AB6199 /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65B6829427FDC5BF00847E47 /* Utility.swift in Sources */,
 				6537845B27FB09AD00AB6199 /* ViewController.swift in Sources */,
 				6537847127FB10A600AB6199 /* WriteDiaryViewController.swift in Sources */,
 				6537846F27FB0E7C00AB6199 /* StarCell.swift in Sources */,
