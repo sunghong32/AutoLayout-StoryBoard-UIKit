@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class HomeViewController: UICollectionViewController {
     var contents: [Content] = []
@@ -28,6 +29,8 @@ class HomeViewController: UICollectionViewController {
         // CollectionView Item(Cell) 설정
         collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: "ContentCollectionViewCell")
         collectionView.register(ContentCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ContentCollectionViewHeader.self")
+
+        collectionView.collectionViewLayout = layout()
 }
 
     func getContents() -> [Content] {
@@ -36,6 +39,49 @@ class HomeViewController: UICollectionViewController {
               let list = try? PropertyListDecoder().decode([Content].self, from: data) else { return [] }
 
         return list
+    }
+
+    // 각각의 세션 타입에 대한 UICollectionViewLayout 생성
+    private func layout() -> UICollectionViewLayout {
+        return UICollectionViewCompositionalLayout { [weak self] sectionNumber, environment -> NSCollectionLayoutSection? in
+            guard let self = self else { return nil }
+
+            switch self.contents[sectionNumber].sectionType {
+                case .basic:
+                    return self.createBasicTypeSection()
+                default:
+                    return nil
+            }
+        }
+    }
+
+    private func createBasicTypeSection() -> NSCollectionLayoutSection {
+        // item
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalHeight(0.75))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = .init(top: 10, leading: 5, bottom: 0, trailing: 5)
+
+        // group
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .estimated(200))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)
+
+        // section
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuous
+        section.contentInsets = .init(top: 0, leading: 5, bottom: 0, trailing: 5)
+
+        return section
+    }
+
+    // SectionHeader layout 설정
+    private func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
+        //Section Header 사이즈
+        let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30))
+
+        // Section Header layout
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: layoutSectionHeaderSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+
+        return sectionHeader
     }
 }
 
@@ -86,5 +132,25 @@ extension HomeViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sectionName = contents[indexPath.section].sectionName
         print("TEST: \(sectionName)섹션의 \(indexPath.row + 1)번째 콘텐츠")
+    }
+}
+
+// SwiftUI를 활용한 미리보기
+struct HomeViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        Container().edgesIgnoringSafeArea(.all)
+    }
+
+    struct Container: UIViewControllerRepresentable {
+        func makeUIViewController(context: Context) -> some UIViewController {
+            let layout = UICollectionViewLayout()
+            let homeViewController = HomeViewController(collectionViewLayout: layout)
+
+            return UINavigationController(rootViewController: homeViewController)
+        }
+
+        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+            typealias UIViewControllerType = UIViewController
+        }
     }
 }
