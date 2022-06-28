@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		651CCABA286B194300AA9B5E /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651CCAB9286B194300AA9B5E /* AppDetailViewController.swift */; };
+		651CCABE286B211600AA9B5E /* Feature.plist in Resources */ = {isa = PBXBuildFile; fileRef = 651CCABB286B211600AA9B5E /* Feature.plist */; };
+		651CCABF286B211600AA9B5E /* RankingFeature.plist in Resources */ = {isa = PBXBuildFile; fileRef = 651CCABC286B211600AA9B5E /* RankingFeature.plist */; };
+		651CCAC0286B211600AA9B5E /* Today.plist in Resources */ = {isa = PBXBuildFile; fileRef = 651CCABD286B211600AA9B5E /* Today.plist */; };
+		651CCAC3286B227C00AA9B5E /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651CCAC2286B227C00AA9B5E /* Today.swift */; };
+		651CCAC5286B22D200AA9B5E /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651CCAC4286B22D200AA9B5E /* Feature.swift */; };
+		651CCAC7286B231100AA9B5E /* RankingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651CCAC6286B231100AA9B5E /* RankingFeature.swift */; };
 		65214A25286330760049471D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65214A24286330760049471D /* AppDelegate.swift */; };
 		65214A27286330760049471D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65214A26286330760049471D /* SceneDelegate.swift */; };
 		65214A2E286330770049471D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65214A2D286330770049471D /* Assets.xcassets */; };
@@ -27,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		651CCAB9286B194300AA9B5E /* AppDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
+		651CCABB286B211600AA9B5E /* Feature.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Feature.plist; sourceTree = "<group>"; };
+		651CCABC286B211600AA9B5E /* RankingFeature.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RankingFeature.plist; sourceTree = "<group>"; };
+		651CCABD286B211600AA9B5E /* Today.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Today.plist; sourceTree = "<group>"; };
+		651CCAC2286B227C00AA9B5E /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
+		651CCAC4286B22D200AA9B5E /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		651CCAC6286B231100AA9B5E /* RankingFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingFeature.swift; sourceTree = "<group>"; };
 		65214A21286330760049471D /* AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65214A24286330760049471D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65214A26286330760049471D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +73,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		651CCAC1286B212800AA9B5E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				651CCABB286B211600AA9B5E /* Feature.plist */,
+				651CCABC286B211600AA9B5E /* RankingFeature.plist */,
+				651CCABD286B211600AA9B5E /* Today.plist */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		65214A18286330760049471D = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +104,10 @@
 			children = (
 				65214A24286330760049471D /* AppDelegate.swift */,
 				65214A26286330760049471D /* SceneDelegate.swift */,
+				651CCAC6286B231100AA9B5E /* RankingFeature.swift */,
+				651CCAC2286B227C00AA9B5E /* Today.swift */,
+				651CCAC4286B22D200AA9B5E /* Feature.swift */,
+				651CCAC1286B212800AA9B5E /* Data */,
 				65214A40286336E50049471D /* Scenes */,
 				65214A2D286330770049471D /* Assets.xcassets */,
 				65214A2F286330770049471D /* LaunchScreen.storyboard */,
@@ -94,6 +122,7 @@
 				6539BF292869C6C800B08943 /* App */,
 				65214A41286337010049471D /* Today */,
 				65214A3E286332200049471D /* TabBarController.swift */,
+				651CCAB9286B194300AA9B5E /* AppDetailViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -188,6 +217,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651CCABF286B211600AA9B5E /* RankingFeature.plist in Resources */,
+				651CCAC0286B211600AA9B5E /* Today.plist in Resources */,
+				651CCABE286B211600AA9B5E /* Feature.plist in Resources */,
 				65214A31286330770049471D /* LaunchScreen.storyboard in Resources */,
 				65214A2E286330770049471D /* Assets.xcassets in Resources */,
 			);
@@ -201,8 +233,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6539BF2F2869D41E00B08943 /* SeparatorView.swift in Sources */,
+				651CCAC3286B227C00AA9B5E /* Today.swift in Sources */,
 				65214A43286337110049471D /* TodayViewController.swift in Sources */,
 				6539BF352869E1F400B08943 /* ExchangeCodeButtonView.swift in Sources */,
+				651CCAC7286B231100AA9B5E /* RankingFeature.swift in Sources */,
+				651CCAC5286B22D200AA9B5E /* Feature.swift in Sources */,
 				65214A3F286332200049471D /* TabBarController.swift in Sources */,
 				65214A25286330760049471D /* AppDelegate.swift in Sources */,
 				65214A27286330760049471D /* SceneDelegate.swift in Sources */,
@@ -211,6 +246,7 @@
 				65D187ED28633F2300FD3E19 /* TodayCollectionHeaderView.swift in Sources */,
 				65214A4528633B080049471D /* TodayCollectionViewCell.swift in Sources */,
 				6539BF2B2869CC8500B08943 /* FeatureSectionView.swift in Sources */,
+				651CCABA286B194300AA9B5E /* AppDetailViewController.swift in Sources */,
 				6539BF332869DC4600B08943 /* RankingFeatureCollectionViewCell.swift in Sources */,
 				6539BF312869D60F00B08943 /* RankingFeatureSectionView.swift in Sources */,
 			);
