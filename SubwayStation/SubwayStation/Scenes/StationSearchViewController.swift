@@ -13,6 +13,7 @@ class StationSearchViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.isHidden = true
 
         return tableView
@@ -52,8 +53,14 @@ extension StationSearchViewController: UISearchBarDelegate {
 
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         numberOfCell = 0
-        tableView.reloadData()
-        tableView.isEditing = true
+        tableView.isHidden = true
+    }
+}
+
+extension StationSearchViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = StationDetailViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
