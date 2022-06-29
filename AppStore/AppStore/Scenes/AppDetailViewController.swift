@@ -52,7 +52,7 @@ final class AppDetailViewController: UIViewController {
         button.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
         button.tintColor = .systemBlue
         button.addTarget(self, action: #selector(didTabShareButton), for: .touchUpInside)
-        return button
+        return buttonㄴ
     }()
 
     init(today: Today) {
