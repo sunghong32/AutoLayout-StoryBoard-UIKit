@@ -17,6 +17,7 @@
 		65337DB3286C7264003A4E51 /* StattionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65337DB2286C7264003A4E51 /* StattionDetailViewController.swift */; };
 		65337DB5286C779C003A4E51 /* StationDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65337DB4286C779C003A4E51 /* StationDetailCollectionViewCell.swift */; };
 		65337DB7286C7F47003A4E51 /* StationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65337DB6286C7F47003A4E51 /* StationResponseModel.swift */; };
+		65E92F4F287301C000CADD86 /* StationArrivalDataResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E92F4E287301C000CADD86 /* StationArrivalDataResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		65337DB2286C7264003A4E51 /* StattionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StattionDetailViewController.swift; sourceTree = "<group>"; };
 		65337DB4286C779C003A4E51 /* StationDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		65337DB6286C7F47003A4E51 /* StationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationResponseModel.swift; sourceTree = "<group>"; };
+		65E92F4E287301C000CADD86 /* StationArrivalDataResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationArrivalDataResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				65337D97286C69C7003A4E51 /* AppDelegate.swift */,
 				65337D99286C69C7003A4E51 /* SceneDelegate.swift */,
 				65337DB6286C7F47003A4E51 /* StationResponseModel.swift */,
+				65E92F4E287301C000CADD86 /* StationArrivalDataResponseModel.swift */,
 				65337DB1286C7249003A4E51 /* Scenes */,
 				65337DA0286C69C8003A4E51 /* Assets.xcassets */,
 				65337DA2286C69C8003A4E51 /* LaunchScreen.storyboard */,
@@ -166,6 +169,7 @@
 				65337D9C286C69C7003A4E51 /* StationSearchViewController.swift in Sources */,
 				65337DB7286C7F47003A4E51 /* StationResponseModel.swift in Sources */,
 				65337DB3286C7264003A4E51 /* StattionDetailViewController.swift in Sources */,
+				65E92F4F287301C000CADD86 /* StationArrivalDataResponseModel.swift in Sources */,
 				65337D98286C69C7003A4E51 /* AppDelegate.swift in Sources */,
 				65337DB5286C779C003A4E51 /* StationDetailCollectionViewCell.swift in Sources */,
 				65337D9A286C69C7003A4E51 /* SceneDelegate.swift in Sources */,
