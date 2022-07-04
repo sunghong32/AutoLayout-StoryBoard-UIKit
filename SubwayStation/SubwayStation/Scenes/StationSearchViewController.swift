@@ -63,16 +63,19 @@ class StationSearchViewController: UIViewController {
 extension StationSearchViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         tableView.reloadData()
-        tableView.isHidden = false
+        tableView.isHidden = true
     }
 
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        tableView.isHidden = true
-        stations = []
+        tableView.isHidden = false
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         requestStationName(from: searchText)
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        stations = []
     }
 }
 
@@ -86,14 +89,30 @@ extension StationSearchViewController: UITableViewDelegate {
 
 extension StationSearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return stations.count
+        var stationNameArr: [String] = []
+
+        for i in 0..<stations.count {
+            stationNameArr.append(stations[i].stationName)
+        }
+
+        let tempArr = Set(stationNameArr)
+        stationNameArr = Array(tempArr)
+
+        return stationNameArr.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
         let station = stations[indexPath.row]
+        var lineStr: String = ""
+
+        for i in 0..<stations.count {
+            lineStr += stations[i].lineNumber
+        }
+
         cell.textLabel?.text = station.stationName
-        cell.detailTextLabel?.text = station.lineNumber.replacingOccurrences(of: "0", with: "")
+        cell.detailTextLabel?.text = lineStr.replacingOccurrences(of: "0", with: "")
+            .replacingOccurrences(of: "선", with: "선 ")
 
         return cell
     }

@@ -62,7 +62,13 @@ final class StationDetailViewController: UIViewController {
     }
 
     @objc private func fetchData() {
-        let stationName = station.stationName
+        var stationName = ""
+
+        if station.stationName == "서울역" {
+            stationName = "서울"
+        } else {
+            stationName = station.stationName
+        }
         let urlString = "http://swopenapi.seoul.go.kr/api/subway/sample/json/realtimeStationArrival/0/5/\(stationName)"
 
         AF.request(urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
