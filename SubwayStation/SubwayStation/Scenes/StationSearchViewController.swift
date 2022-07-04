@@ -53,10 +53,8 @@ class StationSearchViewController: UIViewController {
                 guard let self = self else { return }
                 guard case .success(let data) = response.result else { return }
 
-                DispatchQueue.main.async {
-                    self.stations = data.stations
-                    self.tableView.reloadData()
-                }
+                self.stations = data.stations
+                self.tableView.reloadData()
             }
             .resume()
     }
